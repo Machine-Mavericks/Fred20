@@ -1,4 +1,0 @@
-See file:///Users/gbuckholtz/Downloads/Fred20/build/tmp/compileFrcUserProgramReleaseExecutableFrcUserProgramCpp/output.txt for all output for compileFrcUserProgramReleaseExecutableFrcUserProgramCpp.
-compiling Robot.cpp successful.
-
-Finished compileFrcUserProgramReleaseExecutableFrcUserProgramCpp, see full log file:///Users/gbuckholtz/Downloads/Fred20/build/tmp/compileFrcUserProgramReleaseExecutableFrcUserProgramCpp/output.txt.
