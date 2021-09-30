@@ -10,6 +10,8 @@
 #include <frc/livewindow/LiveWindow.h>
 
 class Robot : public frc::TimedRobot {
+
+ 
  public:
   Robot() {
     m_robotDrive.SetExpiration(0.1);
@@ -22,6 +24,7 @@ class Robot : public frc::TimedRobot {
   }
 
   void AutonomousPeriodic() override {
+    
     // Drive for 2 seconds
     if (m_timer.Get() < 2.0) {
       // Drive forwards half speed
@@ -36,7 +39,7 @@ class Robot : public frc::TimedRobot {
 
   void TeleopPeriodic() override {
     // Drive with arcade style (use right stick)
-    m_robotDrive.ArcadeDrive(m_stick.GetY(), m_stick.GetX());
+    m_robotDrive.ArcadeDrive(m_stick.GetY() * SensitivityY, m_stick.GetX() * SensitivityX);
   }
 
   void TestInit() override {}
@@ -44,6 +47,7 @@ class Robot : public frc::TimedRobot {
   void TestPeriodic() override {}
 
  private:
+  float SensitivityX = 0.8f, SensitivityY = 0.8f;
   // Robot drive system
   frc::PWMVictorSPX m_left{0};
   frc::PWMVictorSPX m_right{1};
